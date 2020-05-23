@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nest:
+    build: .
+    command: >
+      sh -c "yarn run deploy && yarn run start:dev"
+    ports: 
+      - 4000:3000
+    depends_on: 
+      - prisma
+
